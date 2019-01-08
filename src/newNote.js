@@ -36,7 +36,7 @@ class NewNote extends Component {
         // Send a POST request
         axios({
             method: 'post',
-            url: backendBaseUrl + postEndpoint,
+            url: backendBaseUrl + postEndPoint,
             data: {
                 title: this.state.text,
                 date: Date.now(),
