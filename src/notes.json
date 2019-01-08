@@ -1,0 +1,22 @@
+[
+    {
+        "date": "12/05/2018",
+        "title": "Test Note",
+        "text": "This is a sample note. When you want to create a note, click the create button. You can add a date, a title, and the text of your note. Then, you simply click Save, and you have a note! You can also edit and delete a note. Go on... Give it a try!"
+    },
+    {
+        "date": "12/08/2018",
+        "title": "Lemonade Recipe",
+        "text": "I saw this on the back of a bag of lemons: 1. squeeze the juice of 5 lemons. 2. Add to 2 quarts of water. 3. Add 1 cup of sugar. 4. Stir well and refrigerate. Makes 2 quarts."
+    },
+    {
+        "date": "12/03/2018",
+        "title": "Social Good Ipsum",
+        "text": "Radical synergy optimism incubator granular policymaker, fairness black lives matter human-centered. Change-makers invest grit resist; emerging; thought provoking. Social capital co-creation, social entrepreneur best practices mass incarceration incubator philanthropy. Justice challenges and opportunities, communities systems thinking circular. From http://socialgoodipsum.com"
+    },
+    {
+        "date": "12/04/2018",
+        "title": "Cupcake Ipsum",
+        "text": "Danish sesame snaps powder croissant gingerbread chocolate bar. Carrot cake biscuit icing sesame snaps dragée tiramisu chocolate halvah macaroon. Carrot cake dragée cake cake. from http://www.cupcakeipsum.com"
+    }
+]
