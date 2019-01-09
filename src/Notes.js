@@ -1,29 +1,27 @@
 import React, { Component } from 'react'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import Note from "../src/Note"
 import axios from 'axios';
-const url = 'https://jot-tt.herokuapp.com/api/notes/'
+const url = 'http://localhost:3001/api/notes'
 
 class Notes extends Component {
     componentDidMount() {
         axios.get(url)
             .then(res => {
                 let notes = res.data
-                this.props.setState({ notes: notes })// sets state of notes
+                this.props.setNotes(notes)
                 console.log(notes)
             })
             .catch(err => {
                 console.log(err)
             })
     }
-
     render() {
-
-        let notes = this.props.notes.map((note, index) => {
+        let notes = this.props.notes.map((note, idx) => {
             return (
-                <div className="note" key={index.title}>
-                    <h2>{note.title}</h2>
-                    <h4>{note.date}</h4>
-                    <p>{note.text}</p>
+                <div key={idx} className="note">
+                    <h4><Link to={"/notes/" + note._id}>{note.title}</Link></h4>
+                    <span><p>Date: {note.date}</p></span>
                 </div>
             )
         })
@@ -31,7 +29,7 @@ class Notes extends Component {
             <div>
                 {notes}
             </div>
-        );
+        )
     }
 }
 

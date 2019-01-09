@@ -1,22 +1,36 @@
 import React, { Component } from 'react'
 import axios from "axios"
-const notesURL = 'https://jot-tt.herokuapp.com/api/notes/'
+const notesURL = 'http://localhost:3001/api/notes/'
 
 
 
 class Note extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            title: '',
+            text: '',
+            redirect: false
+        }
+
+        this.handleDeleteNote = this.handleDeleteNote.bind(this)
+
+    }
+    handleDeleteNote(event) {
+        // set up for finding note by id then deleting
+    }
     componentDidMount() {//after app mounts to the page
         const id = this.props.match.params.id//grab id from new path
         console.log(id)
 
-        const url = `${notesURL}${id}/quote`
+        const url = `${notesURL}${id}`
         console.log(url)
 
         axios.get(url)
             .then(response => {
-                let stock = response.data// gets data returned as an object
-                this.props.setStock(stock)//sets state of stock(App) 
-                console.log(stock)
+                let note = response.data// gets data returned as an object
+                this.props.setNote(note)
+                console.log(note)
             })
             .catch(err => {
                 console.error(err)
@@ -35,7 +49,6 @@ class Note extends Component {
             </div >
         )
     }
-
 }
 
 export default Note

@@ -17,17 +17,17 @@ class NewNote extends Component {
             redirect: false
         }
 
-        this.handleTitleChange = this.handleTitleChange.bind(this);
-        this.handleTextChange = this.handleTextChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleTitleChange = this.handleTitleChange.bind(this)
+        this.handleTextChange = this.handleTextChange.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this)
     }
 
     handleTitleChange(event) {
-        this.setState({ title: event.target.value });
+        this.setState({ title: event.target.value })
     }
 
     handleTextChange(event) {
-        this.setState({ text: event.target.value });
+        this.setState({ text: event.target.value })
     }
 
 
@@ -36,40 +36,45 @@ class NewNote extends Component {
         // Send a POST request
         axios({
             method: 'post',
-            url: backendBaseUrl + postEndPoint,
+            url: "https://jot-tt.herokuapp.com/api/notes",
             data: {
                 title: this.state.text,
-                date: Date.now(),
                 text: this.state.text
             }
         })
-            .then((dataResult) => this.setState({ id: dataResult.data._id }))
-            .then(() => this.setState({ redirect: true }));
-        event.preventDefault();
+            .then((res) => {
+                this.setState({
+                    id: res.data._id,
+                    redirect: true
+                })
+
+            })
+            // .then(() => this.setState({ redirect: true }))
+            .catch(err => { console.log(err) })
+        event.preventDefault()
     }
 
 
     render() {
 
         if (this.state.redirect === true) {
-            return <Redirect to={'/note/' + this.state.id} />
+            return <Redirect to={'/notes/' + this.state.id} />
         }
 
         return (
             <div className="note">
+                <h3>New Note</h3>
                 <form className="form-inline" onSubmit={this.handleSubmit}>
-                    <h1>New Note</h1>
                     <div>
-                        <div>
-                            <input type="text" value={this.state.title} onChange={this.handleTitleChange} placeholder="Title" />
-                        </div>
-                        <div>
-                            <input type="text" value={this.state.text} onChange={this.handleTextChange} placeholder="Text" />
-                        </div>
-                        <div>
-                            <input type="submit" value="Save" />
-                        </div>
+                        <input name="title" size="50" type="text" value={this.state.title} onChange={this.handleTitleChange} placeholder="Title" />
                     </div>
+                    <div>
+                        <textarea name="text" rows="4" cols="50" value={this.state.text} onChange={this.handleTextChange} placeholder="Text" />
+                    </div>
+                    <div>
+                        <input type="submit" value="Save" />
+                    </div>
+
                 </form>
             </div>
         );

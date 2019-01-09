@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import { Route, Link } from 'react-router-dom'
 import Notes from './Notes'
-import About from '../src/About'
-import Note from '../src/Note'
+import NewNote from './NewNote'
+import About from './About'
+import Note from './Note'
 import './App.css'
 // import axios from 'axios';
-import listOfNotes from '../src/notes.json'
+import listOfNotes from './notes.json'
 // const url = 'https://jot-tt.herokuapp.com/api/notes/'
 
 
@@ -36,11 +37,16 @@ class App extends Component {
     return (
       <div>
         <nav className="app">
-          <h2><Link to="/">Jot</Link></h2>
+          <h2><Link to="/notes">Jot</Link></h2>
           <h3><Link to="/about">about</Link></h3>
         </nav>
         <main>
-          <button className="btn btn-success">+Note</button>
+          <Link to="/new"><button className="btn btn-success">+Note</button></Link>
+          <Route exact path="/new" render={(props) => <NewNote
+            setNote={this.setNote}
+            {...props}
+            {...this.state}
+          />} />
           <Route exact path="/notes/:id" render={(props) => <Note
             setNote={this.setNote}
             notes={listOfNotes}
@@ -53,7 +59,7 @@ class App extends Component {
             {...props}
             {...this.state}
           />} />
-          <Route path="/about" component={About} />
+          <Route exact path="/about" component={About} />
 
 
 
