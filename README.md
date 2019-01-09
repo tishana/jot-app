@@ -1,68 +1,62 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Jot
 
-## Available Scripts
+ Jot is a frontend application I created using React for use with a backend called Note App API.
 
-In the project directory, you can run:
+--------------------------------------------
+## User Stories
 
-### `npm start`
+* I can create a note (Create Note).
+* I can view a list of notes (Read Note).
+* I can edit a note (Update Note).
+* I can view a note (Read Note).
+* I can delete a note (Delete Note).
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+--------------------------------------------
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Technologies Used for Jot:
 
-### `npm test`
+* React.js
+* Axios
+* Surge
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+--------------------------------------------
+## How to Install Jot locally:
 
-### `npm run build`
+* Fork and clone this repository to your machine
+* Change into the new directory
+* Run npm install:
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+$ npm i
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+```
+* Open another terminal tab, and run npm run start
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+$ npm run start
 
-### `npm run eject`
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+* A browser window will open, and you're all set.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+You will see notes on the main page. You can delete these, and create your own. You can even connect it to your own back end by changing the urls.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+--------------------------------------------
+## Challenges During this Project
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+My original goal for Jot was to make this a fullstack application with a front end portion in Backbone.js. I've never worked with Backbone.js and this proved to be a huge hurdle. 
 
-## Learn More
+In the end, all front end frameworks intend to do the same thing, display your data. However, learning THIS framework took some serious brain gymnastics, and I lost a lot of valuable time due to a trivial mistake: BACKBONE IS NOT ES6 COMPATIBLE!
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+After figuring this out, I had to start all over because I was constantly scrapping what I thought was bad code.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+I decided to build a backend application with Node, Mongoose, and Express, which you can view [here](https://github.com/tishana/note-app).
 
-### Code Splitting
+This experience has taught me a lot about learning on my own. I wasn't able to get any instructor assistance due to the nature of this project, but I feel more  confident that I can teach myself anything.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+--------------------------------------------
+## Future Plans for Jot:
 
-### Analyzing the Bundle Size
+I also want to add user authentication so anyone can log in and see their own notes. On top of that I would like to build out a way for people to send notes via email or SMS.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

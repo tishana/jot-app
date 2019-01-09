@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import Note from "../src/Note"
 import axios from 'axios';
-const url = 'http://localhost:3001/api/notes'
+const url = 'https://jot-tt.herokuapp.com/api/notes'
 
 class Notes extends Component {
     componentDidMount() {
@@ -19,14 +18,14 @@ class Notes extends Component {
     render() {
         let notes = this.props.notes.map((note, idx) => {
             return (
-                <div key={idx} className="note">
+                <div key={idx} className="notes">
                     <h4><Link to={"/notes/" + note._id}>{note.title}</Link></h4>
                     <span><p>Date: {note.date}</p></span>
                 </div>
             )
         })
         return (
-            <div>
+            <div className="container">
                 {notes}
             </div>
         )
