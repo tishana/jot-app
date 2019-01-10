@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios';
-const url = 'https://jot-tt.herokuapp.com/api/notes'
+// const url = 'https://jot-tt.herokuapp.com/api/notes'
+const url = 'http://localhost:3001/api/notes'
+
 
 class Notes extends Component {
     componentDidMount() {
@@ -20,7 +22,7 @@ class Notes extends Component {
             return (
                 <div key={idx} className="notes">
                     <h4><Link to={"/notes/" + note._id}>{note.title}</Link></h4>
-                    <span><p>Date: {note.date}</p></span>
+                    <span><p>Created: {note.date}</p></span>
                 </div>
             )
         })

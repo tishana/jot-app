@@ -2,7 +2,9 @@ import React, { Component } from 'react'
 import axios from "axios"
 import { Redirect } from 'react-router';
 import { Link } from "react-router-dom"
-const notesURL = "https://jot-tt.herokuapp.com/api/notes/"
+// const notesURL = "https://jot-tt.herokuapp.com/api/notes/"
+const notesURL = 'http://localhost:3001/api/notes/'
+
 
 
 
@@ -58,7 +60,7 @@ class Note extends Component {
             return (
                 <div className="note">
                     <span><h2>{this.props.note.title}</h2></span>
-                    <span><h6>Date: {this.props.note.date}</h6></span>
+                    <span><h6>Created: {this.props.note.date}</h6></span>
                     <span><p>Text: {this.props.note.text}</p></span>
                     <Link to={"/notes/" + this.props.note._id + "/edit"}><button className="btn btn-info">Edit</button></Link><button onClick={this.handleDeleteNote} className="btn btn-danger">Delete</button>
                 </div >

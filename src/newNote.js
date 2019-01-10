@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import axios from "axios"
 import { Redirect } from 'react-router'
-const url = 'https://jot-tt.herokuapp.com/api/notes'
+// const url = 'https://jot-tt.herokuapp.com/api/notes'
+const url = 'http://localhost:3001/api/notes'
 
 
 class NewNote extends Component {
