@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios';
-// const url = 'https://jot-tt.herokuapp.com/api/notes'
-const url = 'http://localhost:3001/api/notes'
+const url = 'https://jot-tt.herokuapp.com/api/notes'
+// const url = 'http://localhost:3001/api/notes'
 
 
 class Notes extends Component {
