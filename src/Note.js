@@ -61,7 +61,7 @@ class Note extends Component {
                 <div className="note">
                     <span><h2>{this.props.note.title}</h2></span>
                     <span><h6>Created: {this.props.note.date}</h6></span>
-                    <span><p>Text: {this.props.note.text}</p></span>
+                    <span><p>{this.props.note.text}</p></span>
                     <Link to={"/notes/" + this.props.note._id + "/edit"}><button className="btn btn-info">Edit</button></Link><button onClick={this.handleDeleteNote} className="btn btn-danger">Delete</button>
                 </div >
             )
