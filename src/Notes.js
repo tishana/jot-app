@@ -21,7 +21,7 @@ class Notes extends Component {
         let notes = this.props.notes.map((note, idx) => {
             return (
                 <div key={idx} className="notes">
-                    <h4><Link to={"/notes/" + note._id}>{note.title}</Link></h4>
+                    <h4><Link to={"/jot-app/" + note._id}>{note.title}</Link></h4>
                     <span><p>Created: {note.date}</p></span>
                 </div>
             )
