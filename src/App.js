@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Route, Link } from 'react-router-dom'
 import Notes from './Notes'
-import NewNote from './NewNote'
+import NewNote from './newNote'
 import EditNote from './EditNote'
 import About from './About'
 import Note from './Note'
