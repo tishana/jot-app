@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/jot-app/static/js/runtime~main.0e648742.js"
   },
   {
-    "revision": "9aea451646e79ca2e39f",
-    "url": "/jot-app/static/js/main.9aea4516.chunk.js"
+    "revision": "49f11f8148f147cf0c79",
+    "url": "/jot-app/static/js/main.49f11f81.chunk.js"
   },
   {
     "revision": "2891c8271e42ad894a80",
     "url": "/jot-app/static/js/1.2891c827.chunk.js"
   },
   {
-    "revision": "9aea451646e79ca2e39f",
+    "revision": "49f11f8148f147cf0c79",
     "url": "/jot-app/static/css/main.472acdf4.chunk.css"
   },
   {
-    "revision": "74c116c327ede2f51e85e0b3902b8c2d",
+    "revision": "4c3832d78e9c6df4471dd250d65362f1",
     "url": "/jot-app/index.html"
   }
 ];
