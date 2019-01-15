@@ -36,29 +36,29 @@ class App extends Component {
       <div>
         <header className="app">
           <nav>
-            <Link className="logo" to="/notes">Jot</Link>
+            <Link className="logo" to="/jot-app">Jot</Link>
             <Link className="about" to="/about">about</Link>
           </nav>
 
         </header>
         <main>
-          <Link to="/new"><button className="btn btn-success">+Note</button></Link>
-          <Route exact path="/new" render={(props) => <NewNote
+          <Link to="/jot-app/new"><button className="btn btn-success">+Note</button></Link>
+          <Route exact path="/jot-app/new" render={(props) => <NewNote
             setNote={this.setNote}
             {...props}
             {...this.state}
           />} />
-          <Route exact path="/notes/:id/edit" render={(props) => <EditNote
+          <Route exact path="/jot-app/:id/edit" render={(props) => <EditNote
             setNote={this.setNote}
             {...props}
             {...this.state}
           />} />
-          <Route exact path="/notes/:id" render={(props) => <Note
+          <Route exact path="/jot-app/:id" render={(props) => <Note
             setNote={this.setNote}
             {...props}
             {...this.state}
           />} />
-          <Route exact path="/notes" render={(props) => <Notes
+          <Route exact path="/jot-app" render={(props) => <Notes
             setNotes={this.setNotes}
             {...props}
             {...this.state}

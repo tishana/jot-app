@@ -54,7 +54,7 @@ class Note extends Component {
         const { redirect } = this.state;
 
         if (redirect) {
-            return <Redirect push to={'/notes'} />
+            return <Redirect push to={'/jot-app'} />
         } else {
 
             return (
@@ -62,7 +62,7 @@ class Note extends Component {
                     <span><h2>{this.props.note.title}</h2></span>
                     <span><h6>Created: {this.props.note.date}</h6></span>
                     <span><p>{this.props.note.text}</p></span>
-                    <Link to={"/notes/" + this.props.note._id + "/edit"}><button className="btn btn-info">Edit</button></Link><button onClick={this.handleDeleteNote} className="btn btn-danger">Delete</button>
+                    <Link to={"/jot-app/" + this.props.note._id + "/edit"}><button className="btn btn-info">Edit</button></Link><button onClick={this.handleDeleteNote} className="btn btn-danger">Delete</button>
                 </div >
             )
         }

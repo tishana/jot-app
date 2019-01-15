@@ -75,7 +75,7 @@ class EditNote extends Component {
     render() {
 
         if (this.state.redirect === true) {
-            return <Redirect to={'/notes/' + this.state.id} />
+            return <Redirect to={'/jot-app/' + this.state.id} />
         }
 
         return (
