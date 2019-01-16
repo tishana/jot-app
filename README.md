@@ -1,6 +1,8 @@
 # Jot
 
  Jot is a frontend application I created using React for use with a backend called Note App API.
+ 
+ You can see Jot in action [here](https://tishana.github.io/jot-app/). Please bear in mind that it may take a few moments to load the data from the API because it is deployed to Heroku and may be hibernating.
 
 --------------------------------------------
 ## User Stories
@@ -44,19 +46,16 @@ You will see notes on the main page. You can delete these, and create your own. 
 --------------------------------------------
 ## Challenges During this Project
 
-My original goal for Jot was to make this a fullstack application with a front end portion in Backbone.js. I've never worked with Backbone.js and this proved to be a huge hurdle. 
+My original goal for Jot was to make this a fullstack application. Since I would like to teach myself other frontend applications, I decided to keep the frontend and backend separate, using the backend as an API for any frontend.
 
-In the end, all front end frameworks intend to do the same thing, display your data. However, learning THIS framework took some serious brain gymnastics, and I lost a lot of valuable time due to a trivial mistake: BACKBONE IS NOT ES6 COMPATIBLE!
-
-After figuring this out, I had to start all over because I was constantly scrapping what I thought was bad code.
+I decided to use React because I wanted to know the framework well. It was part of the cirriculum at General Assembly and a requirement for Project 3. Since Project 3 was a group project the work was divided, and I focused more on the backend. This project was my opportunity to create a React application from start to finish. 
 
 I decided to build a backend application with Node, Mongoose, and Express, which you can view [here](https://github.com/tishana/note-app).
 
-This experience has taught me a lot about learning on my own. I wasn't able to get any instructor assistance due to the nature of this project, but I feel more  confident that I can teach myself anything.
 
 --------------------------------------------
 ## Future Plans for Jot:
 
-I also want to add user authentication so anyone can log in and see their own notes. On top of that I would like to build out a way for people to send notes via email or SMS.
+I want to add user authentication so anyone can log in and see their own notes. On top of that I would like to build out a way for people to share notes via SMS and send notes to other note apps like Evernote.
 
 
