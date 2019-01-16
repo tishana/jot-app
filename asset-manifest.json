@@ -1,13 +1,13 @@
 {
-  "main.css": "/jot-app/static/css/main.472acdf4.chunk.css",
-  "main.js": "/jot-app/static/js/main.49f11f81.chunk.js",
-  "main.js.map": "/jot-app/static/js/main.49f11f81.chunk.js.map",
-  "static/js/1.2891c827.chunk.js": "/jot-app/static/js/1.2891c827.chunk.js",
-  "static/js/1.2891c827.chunk.js.map": "/jot-app/static/js/1.2891c827.chunk.js.map",
+  "main.css": "/jot-app/static/css/main.3e5c8dbf.chunk.css",
+  "main.js": "/jot-app/static/js/main.f02a0d92.chunk.js",
+  "main.js.map": "/jot-app/static/js/main.f02a0d92.chunk.js.map",
+  "static/js/1.2bcd924b.chunk.js": "/jot-app/static/js/1.2bcd924b.chunk.js",
+  "static/js/1.2bcd924b.chunk.js.map": "/jot-app/static/js/1.2bcd924b.chunk.js.map",
   "runtime~main.js": "/jot-app/static/js/runtime~main.0e648742.js",
   "runtime~main.js.map": "/jot-app/static/js/runtime~main.0e648742.js.map",
-  "static/css/main.472acdf4.chunk.css.map": "/jot-app/static/css/main.472acdf4.chunk.css.map",
+  "static/css/main.3e5c8dbf.chunk.css.map": "/jot-app/static/css/main.3e5c8dbf.chunk.css.map",
   "index.html": "/jot-app/index.html",
-  "precache-manifest.f4f4325a411918c69893826c8c3cfd8a.js": "/jot-app/precache-manifest.f4f4325a411918c69893826c8c3cfd8a.js",
+  "precache-manifest.5bbdfe8c40342ecdb7daab20597f212d.js": "/jot-app/precache-manifest.5bbdfe8c40342ecdb7daab20597f212d.js",
   "service-worker.js": "/jot-app/service-worker.js"
 }
