@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { Route, Link } from 'react-router-dom'
+import { Route, Link, Switch } from 'react-router-dom'
 import Notes from './Notes'
-import NewNote from './newNote'
+import NewNote from './NewNote'
 import EditNote from './EditNote'
 import About from './About'
 import Note from './Note'
@@ -9,28 +9,6 @@ import './App.css'
 
 
 class App extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      note: {},
-      notes: []
-    }
-    this.setNote = this.setNote.bind(this)
-    this.setNotes = this.setNotes.bind(this)
-  }
-  setNote(note) {
-    this.setState({
-      note: note
-    })
-  }
-  setNotes(notes) {
-    this.setState({
-      notes: notes
-    })
-  }
-
-
-
   render() {
     return (
       <div>
@@ -43,27 +21,13 @@ class App extends Component {
         </header>
         <main>
           <Link to="/jot-app/new"><button className="btn btn-success">+Note</button></Link>
-          <Route exact path="/jot-app/new" render={(props) => <NewNote
-            setNote={this.setNote}
-            {...props}
-            {...this.state}
-          />} />
-          <Route exact path="/jot-app/:id/edit" render={(props) => <EditNote
-            setNote={this.setNote}
-            {...props}
-            {...this.state}
-          />} />
-          <Route exact path="/jot-app/:id" render={(props) => <Note
-            setNote={this.setNote}
-            {...props}
-            {...this.state}
-          />} />
-          <Route exact path="/jot-app" render={(props) => <Notes
-            setNotes={this.setNotes}
-            {...props}
-            {...this.state}
-          />} />
-          <Route exact path="/about" component={About} />
+          <Switch>
+            <Route path="/jot-app/new" component={NewNote} />
+            <Route path="/jot-app/:id/edit" component={EditNote} />
+            <Route path="/jot-app/:id" component={Note} />
+            <Route path="/jot-app" component={Notes} />
+            <Route path="/about" component={About} />
+          </Switch>
 
 
 
