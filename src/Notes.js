@@ -11,7 +11,8 @@ class Notes extends Component {
         super(props);
         this.state = {
             note: {},
-            notes: []
+            notes: [],
+            loading: false
         }
     }
 
@@ -29,11 +30,15 @@ class Notes extends Component {
 
 
     componentDidMount() {
+        this.setState({ loading: true })
         axios.get(url)
             .then(res => {
                 let notes = res.data
                 this.setNotes(notes)
                 console.log(notes)
+            })
+            .then(() => {
+                this.setState({ loading: false })
             })
             .catch(err => {
                 console.log(err)
