@@ -6,19 +6,42 @@ const url = 'https://jot-tt.herokuapp.com/api/notes'
 
 
 class Notes extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            note: {},
+            notes: []
+        }
+    }
+
+    setNote = (note) => {
+        this.setState({
+            note
+        })
+    }
+
+    setNotes = (notes) => {
+        this.setState({
+            notes
+        })
+    }
+
+
     componentDidMount() {
         axios.get(url)
             .then(res => {
                 let notes = res.data
-                this.props.setNotes(notes)
+                this.setNotes(notes)
                 console.log(notes)
             })
             .catch(err => {
                 console.log(err)
             })
     }
+
     render() {
-        let notes = this.props.notes.map((note, idx) => {
+        let notes = this.state.notes.map((note, idx) => {
             return (
                 <div key={idx} className="notes">
                     <h4><Link to={"/jot-app/" + note._id}>{note.title}</Link></h4>

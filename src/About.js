@@ -12,9 +12,6 @@ class About extends Component {
 
                 <h4>About the creator...</h4>
                 <p>I'm Tishana, a fullstack web developer in the DC Metro Area. I love to create practical apps dedicated to personal goals and organization. You can see more of my work <a href="https://tishana.github.io/">here</a>.Thanks for viewing Jot.</p>
-
-
-
             </div>
         )
     }
