@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
 import axios from "axios"
-import { Redirect } from 'react-router';
 import { Link } from "react-router-dom"
-const notesURL = "https://jot-tt.herokuapp.com/api/notes/"
-// const notesURL = 'http://localhost:3001/api/notes/'
+// const notesURL = "https://jot-tt.herokuapp.com/api/notes/"
+const notesURL = 'http://localhost:3001/api/notes/'
 
 class Note extends Component {
     constructor(props) {
